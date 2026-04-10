@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "neutrallanguageprocessing"
+version = "0.1.0"
+description = "Neural Language Processing with PyTorch"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [
+    {include = "common"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+numpy = "^1.26.0"
+matplotlib = "^3.8.0"
+torch = {version = "^2.0.0", source = "pypi"}
+tqdm = "^4.65.0"
+
+[[tool.poetry.source]]
+name = "pypi"
+url = "https://pypi.org/simple/"
+priority = "primary"
+
+[tool.poetry.scripts]
+train-ch01 = "ch01.train:main"
+train-ch01-custom = "ch01.train_custom_loop:main"
+show-spiral = "ch01.show_spiral_dataset:main"
+cbow-train = "ch03.train:main"
+word2vec-train = "ch04.train:main"
+rnnlm-train = "ch05.train:main"
+seq2seq-train = "ch07.train_seq2seq:main"
+attention-train = "ch08.train:main"
+visualize-attention = "ch08.visualize_attention:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
