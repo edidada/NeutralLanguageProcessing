@@ -12,13 +12,8 @@ packages = [
 python = ">=3.10"
 numpy = "^1.26.0"
 matplotlib = "^3.8.0"
-torch = {version = "^2.0.0", source = "pypi"}
+torch = "^2.0.0"
 tqdm = "^4.65.0"
-
-[[tool.poetry.source]]
-name = "pypi"
-url = "https://pypi.org/simple/"
-priority = "primary"
 
 [tool.poetry.scripts]
 train-ch01 = "ch01.train:main"
